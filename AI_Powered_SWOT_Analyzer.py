@@ -60,10 +60,11 @@ print("- io") #Built-in module, no version
 # --- Streamlit App Configuration ---
 st.set_page_config(page_title="AI-Powered SWOT Analyzer") # Sets the page title in the browser tab.
 
-# Load API Key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") # Retrieves the Google API key from the environment variables.
+# Load API Key from environment variable or Streamlit secrets
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
+
 if not GOOGLE_API_KEY:
-    st.error("Google API Key is missing! Set the GEMINI_API_KEY environment variable.")
+    st.error("Google API Key is missing! Set the GOOGLE_API_KEY environment variable in Streamlit Secrets.")
     st.stop()
 
 # --- Initialize Gemini Model ---

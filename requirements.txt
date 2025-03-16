@@ -1,14 +1,5 @@
-os version: Builtin module
-Python version: 3.12.7
-streamlit version: 1.37.1
-langchain version: 0.3.20
-transformers version: 4.49.0
-GoogleGenerativeAI version: langchain_google_genai.llms
-PromptTemplate version: langchain_core.prompts.prompt
-LLMChain version: langchain.chains.llm
-SimpleSequentialChain version: langchain.chains.sequential
-re version: 2.2.1
-AutoTokenizer version: transformers.models.auto.tokenization_auto
-CharacterTextSplitter version: langchain_text_splitters.character
-PyPDF2 version: 3.0.1
-BytesIO version: _io
+langchain==0.3.20
+langchain_google_genai==2.1.0
+PyPDF2==3.0.1
+streamlit==1.37.1
+transformers==4.49.0
